@@ -11,7 +11,6 @@ function navbar() {
           <a className='m-2 ' href="#"><li>Sale</li></a>
           <a className='m-2 ' href="#"><li>Contacto</li></a>
         </ul>
-        <CartWidget/>
     </div>
     
 
