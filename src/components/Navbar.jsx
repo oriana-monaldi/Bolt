@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from '../assets/logo.jpg';
+import logo from '/assets/logo.jpg';
 import CartWidget from './CartWidget'
 
-function navbar() {
+function Navbar() {
   return (
     <div>
       <div className='flex items-center justify-between bg-white'>
@@ -19,4 +19,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar

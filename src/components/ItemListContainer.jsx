@@ -1,10 +1,10 @@
 import React from 'react'
+import ItemList from './ItemList'
 
-
-function ItemListContainer(props) {
+function ItemListContainer() {
   return (
     <div>
-      <p className='text-4xl text-center mt-20 '>{props.bienvenida}</p>
+      <ItemList/>
     </div>
   )
 }
