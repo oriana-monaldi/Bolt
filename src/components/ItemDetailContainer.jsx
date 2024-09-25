@@ -5,7 +5,6 @@ function ItemDetailContainer() {
     return (
         <div>
             <ItemDetail/>
-            
         </div>
     )
     }

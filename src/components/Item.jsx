@@ -1,13 +1,15 @@
 import React from "react";
-import Button from "./Button";
+import { Link } from "react-router-dom";
+
 function Item({ nombre, precio, imagen }) {
   return (
-    <div className="w-1/4">
-      <img src={imagen} alt={nombre} className="w-48" />
+    <Link>
+    <div className="w-80 h-96 flex flex-col items-center justify-center">
+      <img src={imagen} alt={nombre} className="w-40 flex item-center justify-center" />
       <h2 className="text-center">{nombre}</h2>
       <p className="text-center">$ {precio}</p>
-      <Button />
     </div>
+    </Link>
   );
 }
 

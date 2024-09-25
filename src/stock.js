@@ -1,6 +1,7 @@
 const productos = [
   {
     id: 1,
+    clasificacion: "Remera",
     nombre: "Remera Kiss Dream",
     stock: 15,
     precio: 12000,
@@ -10,7 +11,8 @@ const productos = [
     descripcion: "Remera Kiss Dream. Perfecto para un look casual y chic.",
   },
   {
-    id: 2,
+    id: 2,    
+    clasificacion: "Remera",
     nombre: "Remera Golden Sunset",
     stock: 30,
     precio: 13000,
@@ -18,10 +20,11 @@ const productos = [
     color: "Blanco",
     imagen: "./public/assets/remeras/2.webp",
     descripcion:
-      "Remera de algodón suave con cuello redondo y un color blanco que ilumina cualquier outfit.",
+"Remera de algodón suave con cuello redondo y un color blanco que ilumina cualquier outfit.",
   },
   {
     id: 3,
+    clasificacion: "Remera",
     nombre: "Remera Urban Breeze",
     stock: 12,
     precio: 9000,
@@ -32,135 +35,135 @@ const productos = [
   },
   {
     id: 4,
+    clasificacion: "Pantalon",
     nombre: "Pantalón Street Chic",
     stock: 10,
     precio: 18000,
     talle: ["S", "M", "L"],
     color: "Gris",
     imagen: "./assets/pantalon/7.webp",
-    descripcion:
-      "Pantalón ajustado de talle alto con bolsillos laterales. Un básico para combinar con cualquier prenda.",
+    descripcion:"Pantalón ajustado de talle alto con bolsillos laterales. Un básico para combinar con cualquier prenda.",
   },
   {
     id: 5,
+    clasificacion: "Pantalon",
     nombre: "Pantalón Summer Breeze",
     stock: 20,
     precio: 16000,
     talle: ["S", "M", "L"],
     color: "Gris",
     imagen: "./assets/pantalon/6.webp",
-    descripcion:
-      "Musculosa de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
+    descripcion:"Musculosa de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
   },
   {
     id: 6,
+    clasificacion: "Pantalon",
     nombre: "Pantalon Vintage Vibes",
     stock: 18,
     precio: 17000,
     talle: ["S", "M", "L"],
     color: "Blanco",
     imagen: "./assets/pantalon/5.webp",
-    descripcion:
-    "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 7,
+    clasificacion: "Pantalon",
     nombre: "Pantalon Boho Chic",
     stock: 8,
     precio: 13000,
     talle: ["S", "M", "L"],
     color: "Beige",
     imagen: "./assets/pantalon/4.webp",
-    descripcion:
-    "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 8,
+    clasificacion: "Pantalon",
     nombre: "Pantalon Relaxed Fit",
     stock: 14,
     precio: 14000,
     talle: ["S", "M", "L", "XL"],
     color: "Gris",
     imagen: "./assets/pantalon/3.webp",
-    descripcion:
-    "Pantalon tipo sastrero, hermoso para cualquier look de dia o noche"
+    descripcion:"Pantalon tipo sastrero, hermoso para cualquier look de dia o noche"
   },
   {
     id: 9,
+    clasificacion: "Pantalon",
     nombre: "Pantalon Sunny Days",
     stock: 25,
     precio: 14000,
     talle: ["S", "M", "L"],
     color: "Beige",
     imagen: "./assets/pantalon/2.webp",
-    descripcion:
-      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 10,
+    clasificacion: "Pantalon",
     nombre: "Pantalón Comfy Vibes",
     stock: 10,
     precio: 14000,
     talle: ["S", "M", "L"],
     color: "Negro",
     imagen: "./assets/pantalon/1.webp",
-    descripcion:
-      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 11,
+    clasificacion: "Short",
     nombre: "Short Warm Hugs",
     stock: 12,
     precio: 11000,
     talle: ["S", "M", "L", "XL"],
     color: "Azul",
     imagen: "./assets/shorts/5.webp",
-    descripcion:
-    "Short de Jean color azul "
+    descripcion:"Short de Jean color azul "
   },
   {
     id: 12,
+    clasificacion: "Short",
     nombre: "Short Urban Rebel",
     stock: 8,
     precio: 13000,
     talle: ["S", "M", "L"],
     color: "Animal Print",
     imagen: "./assets/shorts/4.webp",
-    descripcion:
-    "Short de Jean estilo Animal Print, tiro alto, ideal para día y noche"
+    descripcion:"Short de Jean estilo Animal Print, tiro alto, ideal para día y noche"
   },
   {
     id: 13,
+    clasificacion: "Short",
     nombre: "Short Sky High",
     stock: 20,
     precio: 18000,
     talle: ["S", "M", "L", "XL"],
     color: "Negro",
     imagen: "./assets/shorts/1.webp",
-    descripcion:
-    "Short negro engomado"
+    descripcion:"Short negro engomado"
   },
   {
     id: 14,
+    clasificacion: "Short",
     nombre: "Short Desert Rose",
     stock: 7,
     precio: 14000,
     talle: ["S", "M", "L"],
     color: "Negro",
     imagen: "./assets/shorts/3.webp",
-    descripcion:
-    "Short de jean Negro"
+    descripcion:"Short de jean Negro"
     },
   {
     id: 15,
+    clasificacion: "Short",
     nombre: "Short City Lights",
     stock: 6,
     precio: 12000,
     talle: ["S", "M", "L"],
     color: "Negro",
     imagen: "./assets/shorts/2.webp",
-    descripcion:
-      "Short de corte estructurado, ideal para combinar con remeras o musculosas de vestir para un look formal-casual.",
+    descripcion:"Short de corte estructurado, ideal para combinar con remeras o musculosas de vestir para un look formal-casual.",
   },
 ];
 
