@@ -16,7 +16,6 @@ function App() {
           <Route path="/Remeras" element={<Remeras />} />
           <Route path="/Pantalones" element={<Pantalones />} />
           <Route path="/Shorts" element={<Shorts />} />
-          <Route path="/Shorts" element={<Shorts />} />
         </Routes>
       </BrowserRouter>
     </div>
