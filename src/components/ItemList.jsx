@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Item from './Item';  
 import productos from '../stock';
+import '../index.css';
 
 function ItemList( {categoria}) {
     const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ function ItemList( {categoria}) {
     }, []);
 
     if (loading) {
-        return <h2 className='text-center text-2xl'>Cargando...</h2>;
+        return <div className='flex justify-center items-center'><span class="loader"></span></div>;
     }
 
 const productosFiltrados = categoria 
