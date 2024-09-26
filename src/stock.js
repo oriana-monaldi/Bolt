@@ -1,7 +1,7 @@
 const productos = [
   {
     id: 1,
-    clasificacion: "Remera",
+    categoria: "Remeras",
     nombre: "Remera Kiss Dream",
     stock: 15,
     precio: 12000,
@@ -12,7 +12,7 @@ const productos = [
   },
   {
     id: 2,    
-    clasificacion: "Remera",
+    categoria: "Remeras",
     nombre: "Remera Golden Sunset",
     stock: 30,
     precio: 13000,
@@ -24,7 +24,7 @@ const productos = [
   },
   {
     id: 3,
-    clasificacion: "Remera",
+    categoria: "Remeras",
     nombre: "Remera Urban Breeze",
     stock: 12,
     precio: 9000,
@@ -35,7 +35,7 @@ const productos = [
   },
   {
     id: 4,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalón Street Chic",
     stock: 10,
     precio: 18000,
@@ -46,7 +46,7 @@ const productos = [
   },
   {
     id: 5,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalón Summer Breeze",
     stock: 20,
     precio: 16000,
@@ -57,7 +57,7 @@ const productos = [
   },
   {
     id: 6,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalon Vintage Vibes",
     stock: 18,
     precio: 17000,
@@ -68,7 +68,7 @@ const productos = [
   },
   {
     id: 7,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalon Boho Chic",
     stock: 8,
     precio: 13000,
@@ -79,7 +79,7 @@ const productos = [
   },
   {
     id: 8,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalon Relaxed Fit",
     stock: 14,
     precio: 14000,
@@ -90,7 +90,7 @@ const productos = [
   },
   {
     id: 9,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalon Sunny Days",
     stock: 25,
     precio: 14000,
@@ -101,7 +101,7 @@ const productos = [
   },
   {
     id: 10,
-    clasificacion: "Pantalon",
+    categoria: "Pantalones",
     nombre: "Pantalón Comfy Vibes",
     stock: 10,
     precio: 14000,
@@ -112,7 +112,7 @@ const productos = [
   },
   {
     id: 11,
-    clasificacion: "Short",
+    categoria: "Shorts",
     nombre: "Short Warm Hugs",
     stock: 12,
     precio: 11000,
@@ -123,7 +123,7 @@ const productos = [
   },
   {
     id: 12,
-    clasificacion: "Short",
+    categoria: "Shorts",
     nombre: "Short Urban Rebel",
     stock: 8,
     precio: 13000,
@@ -134,7 +134,7 @@ const productos = [
   },
   {
     id: 13,
-    clasificacion: "Short",
+    categoria: "Shorts",
     nombre: "Short Sky High",
     stock: 20,
     precio: 18000,
@@ -145,7 +145,7 @@ const productos = [
   },
   {
     id: 14,
-    clasificacion: "Short",
+    categoria: "Shorts",
     nombre: "Short Desert Rose",
     stock: 7,
     precio: 14000,
@@ -156,7 +156,7 @@ const productos = [
     },
   {
     id: 15,
-    clasificacion: "Short",
+    categoria: "Shorts",
     nombre: "Short City Lights",
     stock: 6,
     precio: 12000,

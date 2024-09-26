@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Item from './Item';  
-import productos from '../stock';  
+import productos from '../stock';
 
-function ItemList() {
+function ItemList( {categoria}) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -25,9 +25,13 @@ function ItemList() {
         return <h2 className='text-center text-2xl'>Cargando...</h2>;
     }
 
+const productosFiltrados = categoria 
+    ? data.filter(producto => producto.categoria === categoria) 
+    : data;
+
     return (
         <div className="grid grid-cols-4 gap-4">
-            {data.map((producto) => (
+            {productosFiltrados.map((producto) => (
                 <Item
                     key={producto.id}
                     id={producto.id}  
@@ -41,6 +45,8 @@ function ItemList() {
             ))}
         </div>
     );
+
+    
 }
 
 export default ItemList;
