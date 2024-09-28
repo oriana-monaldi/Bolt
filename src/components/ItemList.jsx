@@ -23,7 +23,7 @@ function ItemList( {categoria}) {
     }, []);
 
     if (loading) {
-        return <div className='flex justify-center items-center'><span class="loader"></span></div>;
+        return <div className='flex justify-center items-center'><span className="loader"></span></div>;
     }
 
 const productosFiltrados = categoria 

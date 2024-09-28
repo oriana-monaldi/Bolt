@@ -1,12 +1,48 @@
-import React from 'react'
-import ItemDetail from './ItemDetail'
+import React, {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import productos from "../stock";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-    return (
-        <div>
-            <ItemDetail/>
-        </div>
-    )
+    const {id} = useParams();
+    const [item, setItem] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetch = () => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const producto = productos.find(
+                        (p) => p.id === parseInt(id)
+                    );
+                    resolve(producto);
+                }, 2000);
+            });
+        };
+
+        fetch().then((response) => {
+            setItem(response);
+            setLoading(false);
+        });
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="flex h-screen items-center justify-center">
+                <span className="loader"></span>
+            </div>
+        );
     }
 
-export default ItemDetailContainer
+    if (!item) {
+        return <div>Product not found</div>;
+    }
+
+    return (
+        <div className="flex flex-col items-center p-6">
+            <ItemDetail item={item} />
+        </div>
+    );
+}
+
+export default ItemDetailContainer;
