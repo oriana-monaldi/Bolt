@@ -5,7 +5,6 @@ function Item({ id, nombre, precio, imagen }) {
   const navigate = useNavigate();
 
   const manejadorDeClick = () => {
-      
       navigate(`/producto/${id}`);
   };
 

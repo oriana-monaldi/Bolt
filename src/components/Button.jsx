@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 function Button() {
     return (
-        <div className=' flex justify-center items-center'>
-            <div className=' bg-black text-white w-20 text-center rounded-md	'>
-                <a href="#">Comprar</a>
-            </div>
+        <div className='bg-black text-xl text-white w-30 h-8 text-center rounded-md'>
+            <Link to="#">Comprar</Link> 
         </div>
-    )
-    }
+    );
+}
 
-export default Button
+export default Button;

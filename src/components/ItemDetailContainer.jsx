@@ -35,11 +35,11 @@ function ItemDetailContainer() {
     }
 
     if (!item) {
-        return <div>Product not found</div>;
+        return <div>Producto no encontrado</div>;
     }
 
     return (
-        <div className="flex flex-col items-center p-6">
+        <div className="flex flex-col items-center p-4">
             <ItemDetail item={item} />
         </div>
     );
