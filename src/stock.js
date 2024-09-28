@@ -6,7 +6,7 @@ const productos = [
     stock: 15,
     precio: 12000,
     color: "Blanco",
-    imagen: "../public/assets/remeras/3.webp",
+    imagen: "../assets/remeras/3.webp",
     descripcion: "Remera Kiss Dream. Perfecto para un look casual y chic.",
   },
   {
@@ -16,7 +16,7 @@ const productos = [
     stock: 30,
     precio: 13000,
     color: "Blanco",
-    imagen: "../public/assets/remeras/2.webp",
+    imagen: "../assets/remeras/2.webp",
     descripcion:
       "Remera de algodón suave con cuello redondo y un color blanco que ilumina cualquier outfit.",
   },
@@ -27,7 +27,7 @@ const productos = [
     stock: 12,
     precio: 9000,
     color: "Blanco",
-    imagen: "../public/assets/remeras/1.webp",
+    imagen: "../assets/remeras/1.webp",
     descripcion: "Remera Blanca de algodon suave, ideal para todos los días ",
   },
   {
