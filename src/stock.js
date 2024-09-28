@@ -10,7 +10,7 @@ const productos = [
     descripcion: "Remera Kiss Dream. Perfecto para un look casual y chic.",
   },
   {
-    id: 2,    
+    id: 2,
     categoria: "Remeras",
     nombre: "Remera Golden Sunset",
     stock: 30,
@@ -18,7 +18,7 @@ const productos = [
     color: "Blanco",
     imagen: "../public/assets/remeras/2.webp",
     descripcion:
-"Remera de algodón suave con cuello redondo y un color blanco que ilumina cualquier outfit.",
+      "Remera de algodón suave con cuello redondo y un color blanco que ilumina cualquier outfit.",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const productos = [
     stock: 12,
     precio: 9000,
     color: "Blanco",
-    imagen: "../assets/remeras/1.webp",
+    imagen: "../public/assets/remeras/1.webp",
     descripcion: "Remera Blanca de algodon suave, ideal para todos los días ",
   },
   {
@@ -38,7 +38,8 @@ const productos = [
     precio: 18000,
     color: "Gris",
     imagen: "../assets/pantalon/7.webp",
-    descripcion:"Pantalón ajustado de talle alto con bolsillos laterales. Un básico para combinar con cualquier prenda.",
+    descripcion:
+      "Pantalón ajustado de talle alto con bolsillos laterales. Un básico para combinar con cualquier prenda.",
   },
   {
     id: 5,
@@ -48,7 +49,8 @@ const productos = [
     precio: 16000,
     color: "Gris",
     imagen: "../assets/pantalon/6.webp",
-    descripcion:"Musculosa de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
+    descripcion:
+      "Musculosa de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
   },
   {
     id: 6,
@@ -58,7 +60,8 @@ const productos = [
     precio: 17000,
     color: "Blanco",
     imagen: "../assets/pantalon/5.webp",
-    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:
+      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 7,
@@ -68,7 +71,8 @@ const productos = [
     precio: 13000,
     color: "Beige",
     imagen: "../assets/pantalon/4.webp",
-    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:
+      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 8,
@@ -78,7 +82,8 @@ const productos = [
     precio: 14000,
     color: "Gris",
     imagen: "../assets/pantalon/3.webp",
-    descripcion:"Pantalon tipo sastrero, hermoso para cualquier look de dia o noche"
+    descripcion:
+      "Pantalon tipo sastrero, hermoso para cualquier look de dia o noche",
   },
   {
     id: 9,
@@ -88,7 +93,8 @@ const productos = [
     precio: 14000,
     color: "Beige",
     imagen: "../assets/pantalon/2.webp",
-    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:
+      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 10,
@@ -98,7 +104,8 @@ const productos = [
     precio: 14000,
     color: "Negro",
     imagen: "../assets/pantalon/1.webp",
-    descripcion:"Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
+    descripcion:
+      "Pantalón holgado con cintura elástica, perfecto para un look relajado y cómodo.",
   },
   {
     id: 11,
@@ -108,7 +115,7 @@ const productos = [
     precio: 11000,
     color: "Azul",
     imagen: "../assets/shorts/5.webp",
-    descripcion:"Short de Jean color azul "
+    descripcion: "Short de Jean color azul ",
   },
   {
     id: 12,
@@ -118,7 +125,8 @@ const productos = [
     precio: 13000,
     color: "Animal Print",
     imagen: "../assets/shorts/4.webp",
-    descripcion:"Short de Jean estilo Animal Print, tiro alto, ideal para día y noche"
+    descripcion:
+      "Short de Jean estilo Animal Print, tiro alto, ideal para día y noche",
   },
   {
     id: 13,
@@ -128,7 +136,7 @@ const productos = [
     precio: 18000,
     color: "Negro",
     imagen: "../assets/shorts/1.webp",
-    descripcion:"Short negro engomado"
+    descripcion: "Short negro engomado",
   },
   {
     id: 14,
@@ -138,8 +146,8 @@ const productos = [
     precio: 14000,
     color: "Negro",
     imagen: "../assets/shorts/3.webp",
-    descripcion:"Short de jean Negro"
-    },
+    descripcion: "Short de jean Negro",
+  },
   {
     id: 15,
     categoria: "Shorts",
@@ -148,7 +156,8 @@ const productos = [
     precio: 12000,
     color: "Negro",
     imagen: "../assets/shorts/2.webp",
-    descripcion:"Short de corte estructurado, ideal para combinar con remeras o musculosas de vestir para un look formal-casual.",
+    descripcion:
+      "Short de corte estructurado, ideal para combinar con remeras o musculosas de vestir para un look formal-casual.",
   },
 ];
 
