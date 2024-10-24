@@ -50,7 +50,7 @@ const productos = [
     color: "Gris",
     imagen: "../assets/pantalon/6.webp",
     descripcion:
-      "Musculosa de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
+      "Pantalon de tirantes finos y tela suave, ideal para los días de verano y para combinar con jeans o faldas.",
   },
   {
     id: 6,

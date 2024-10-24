@@ -16,7 +16,7 @@ function CartWidget() {
           height="28" 
           viewBox="0 0 24 24" 
           strokeWidth="1.5" 
-          stroke="white" 
+          stroke="black" 
           fill="none" 
           strokeLinecap="round" 
           strokeLinejoin="round"
