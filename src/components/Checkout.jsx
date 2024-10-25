@@ -128,12 +128,14 @@ return (
             </div>
         </div>
 
+    <Link>
         <button
             type="submit"
             className="w-full bg-black text-white py-2 rounded"
         >
             Confirmar compra
         </button>
+    </Link>
         </form>
     </div>
     <div>

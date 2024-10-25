@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function Button() {
+function Button({ children, onClick, className, type = "button", ...props }) {
   return (
-    <div className="bg-black text-xl text-white w-30 h-8 text-center rounded-md">
-      <Link to="#" className="p-2">
-        Comprar
-      </Link>
-    </div>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`bg-black text-white px-6 py-2 rounded ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
   );
 }
 

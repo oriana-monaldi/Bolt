@@ -26,7 +26,7 @@ return (
 		</div>
 		<button
 		onClick={() => onAdd(count)}
-		className="bg-black text-white px-4 py-2 rounded"
+		className="w-full px-8 py-2 m-6 text-sm font-medium text-white bg-indigo-400 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300"
 		disabled={stock === 0}
 		>
 		Agregar al carrito
@@ -53,10 +53,10 @@ return (
 	</div>
 	<div className="w-1/2 flex flex-col items-start pl-4">
 	<h2 className="text-3xl font-bold">{item.nombre}</h2>
-	<p className="text-sm mt-4">{item.descripcion}</p>
-	<p className="text-sm mt-4">Color: {item.color}</p>
-	<p className="text-sm mt-2">Stock: {item.stock}</p>
-	<p className="font-bold text-xl my-4">${item.precio}</p>
+	<p className="text-lg mt-4">{item.descripcion}</p>
+	<p className="text-lg mt-6">Color: {item.color}</p>
+	<p className="text-lg mt-6">Stock: {item.stock}</p>
+	<p className="font-bold text-2xl my-4">${item.precio}</p>
 	<ItemCount stock={item.stock} onAdd={handleAdd} />
 	</div>
 </div>
