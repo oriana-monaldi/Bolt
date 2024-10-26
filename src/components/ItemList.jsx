@@ -22,9 +22,9 @@ function ItemList({ categoria }) {
     });
   }, []);
 
-  if (loading) {
+   if (loading) {
     return (
-      <div className="flex justify-center items-center">
+      <div className="flex h-screen items-center justify-center">
         <span className="loader"></span>
       </div>
     );
@@ -35,19 +35,23 @@ function ItemList({ categoria }) {
     : data;
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      {productosFiltrados.map((producto) => (
-        <Item
-          key={producto.id}
-          id={producto.id}
-          nombre={producto.nombre}
-          stock={producto.stock}
-          precio={producto.precio}
-          color={producto.color}
-          imagen={producto.imagen}
-          descripcion={producto.descripcion}
-        />
-      ))}
+    <div className="flex justify-center items-center">
+      <div className="grid grid-cols-4 gap-6 p-6">
+        {productosFiltrados.map((producto) => (
+          <Item
+            key={producto.id}
+            id={producto.id}
+            nombre={producto.nombre}
+            stock={producto.stock}
+            precio={producto.precio}
+            color={producto.color}
+            imagen={producto.imagen}
+            descripcion={producto.descripcion}
+          />
+        ))}
+      </div>
+
+
     </div>
   );
 }

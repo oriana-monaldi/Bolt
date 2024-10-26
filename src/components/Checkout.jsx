@@ -7,22 +7,26 @@ function Checkout() {
 const { cart, getTotalPrice, clearCart } = useCart();
 const navigate = useNavigate();
 const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-    calle: "",
-    numero: "",
-    piso: "",
-    depto: "",
+nombre: "",
+email: "",
+telefono: "",
+calle: "",
+numero: "",
+piso: "",
+depto: "",
 });
 
 const handleSubmit = (e) => {
+e.preventDefault(); 
 swal({
     title: "Gracias por tu compra!",
     text: "Te enviaremos un mail con los pasos a seguir",
     icon: "success",
-    timer: 9000,
+    timer: 3000,
     buttons: false,
+}).then(() => {
+    clearCart(); 
+    navigate("/"); 
 });
 };
 
@@ -66,21 +70,20 @@ return (
             className="w-full border p-2 rounded"
             />
         </div>
-        <div className="pr-">
+        <div>
             <label className="block mb-1">Telefono</label>
             <input
             type="tel"
-            name="Telefono"
-            value={formData.direccion}
+            name="telefono"
+            value={formData.telefono}
             onChange={handleInputChange}
             required
             className="w-full border p-2 rounded"
             pattern="[0-9]*"
             />
         </div>
-
         <h3 className="text-xl">Dirección</h3>
-        <div className="flex ">
+        <div className="flex">
             <div className="pr-4">
             <label className="block mb-1">Calle</label>
             <input
@@ -93,11 +96,11 @@ return (
             />
             </div>
             <div className="pr-4">
-            <label className="block mb-1">Numero</label>
+            <label className="block mb-1">Número</label>
             <input
                 type="tel"
-                name="Numero"
-                value={formData.direccion}
+                name="numero"
+                value={formData.numero}
                 onChange={handleInputChange}
                 className="w-full border p-2 rounded"
                 required
@@ -110,8 +113,8 @@ return (
             <label className="block mb-1">Piso</label>
             <input
                 type="text"
-                name="Piso"
-                value={formData.direccion}
+                name="piso"
+                value={formData.piso}
                 onChange={handleInputChange}
                 className="w-full border p-2 rounded"
             />
@@ -121,21 +124,18 @@ return (
             <input
                 type="text"
                 name="depto"
-                value={formData.direccion}
+                value={formData.depto}
                 onChange={handleInputChange}
                 className="w-full border p-2 rounded"
             />
             </div>
         </div>
-
-    <Link>
         <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded"
+            className="w-full mt-6 bg-black text-white py-2 rounded"
         >
             Confirmar compra
         </button>
-    </Link>
         </form>
     </div>
     <div>

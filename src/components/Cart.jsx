@@ -37,17 +37,17 @@ return (
         <p>Precio unitario: ${item.precio}</p>
         </div>
     </div>
-        <div>
-            <p className="font-bold">
-            Subtotal: ${item.precio * item.quantity}
-            </p>
-            <button
-            onClick={() => removeFromCart(item.id)}
-            className="text-red-500 mt-2"
-            >
-            Eliminar
-            </button>
-        </div>
+    <div>
+        <p className="font-bold">
+        Subtotal: ${item.precio * item.quantity}
+        </p>
+        <button
+        onClick={() => removeFromCart(item.id)}
+        className="text-red-500 mt-2"
+        >
+        Eliminar
+        </button>
+    </div>
     </div>
     ))}
     </div>
