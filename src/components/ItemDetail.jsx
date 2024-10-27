@@ -12,16 +12,22 @@ function ItemCount({ stock, onAdd }) {
   const decrement = () => {
     if (count > 1) setCount(count - 1);
   };
-
+  
   const handleSubmit = () => {
     swal({
       title: "¡Se ha añadido al carrito correctamente!",
       icon: "success",
       timer: 2000,
       buttons: false,
+      content: {
+        element: "div",
+        attributes: {
+          className: "text-lg font-bold p-4 w-96", 
+        },
+      },
     });
   };
-
+  
   return (
     <div className="flex items-center justify-between mt-4 w-full">
       <div className="flex items-center">
