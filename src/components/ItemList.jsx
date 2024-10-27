@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Item from "./Item";
-import productos from "../stock";
+import { db } from "../firebase/firebase"; 
+import { collection, getDocs } from "firebase/firestore";
 import "../index.css";
 
 function ItemList({ categoria }) {
@@ -8,21 +9,25 @@ function ItemList({ categoria }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const traerProductos = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(productos);
-        }, 3000);
-      });
+    const fetchProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "Item"));
+        const productsArray = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(productsArray);
+      } catch (error) {
+        console.error("Error fetching products: ", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    traerProductos().then((resultados) => {
-      setData(resultados);
-      setLoading(false);
-    });
+    fetchProducts();
   }, []);
 
-   if (loading) {
+  if (loading) {
     return (
       <div className="flex h-screen items-center justify-center">
         <span className="loader"></span>
@@ -50,8 +55,6 @@ function ItemList({ categoria }) {
           />
         ))}
       </div>
-
-
     </div>
   );
 }

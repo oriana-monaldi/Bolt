@@ -36,7 +36,7 @@ function ItemCount({ stock, onAdd }) {
       <button
         onClick={() => {
           onAdd(count);
-          handleSubmit(); // Llama al SweetAlert después de agregar al carrito
+          handleSubmit();
         }}
         className="w-full px-8 py-2 m-6 text-sm font-medium text-white bg-indigo-400 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300"
         disabled={stock === 0}
@@ -57,7 +57,7 @@ function ItemDetail({ item }) {
   return (
     <div className="flex flex-row items-start justify-center">
       <div className="w-1/2 flex justify-end pr-4">
-        <img src={item.imagen} alt={item.name} className="h-82 w-64 object-cover" />
+        <img src={item.imagen} alt={item.nombre} className="h-82 w-64 object-cover" />
       </div>
       <div className="w-1/2 flex flex-col items-start pl-4">
         <h2 className="text-3xl font-bold">{item.nombre}</h2>
