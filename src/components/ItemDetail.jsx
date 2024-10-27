@@ -15,7 +15,7 @@ function ItemCount({ stock, onAdd }) {
 
   const handleSubmit = () => {
     swal({
-      title: "Se ha añadido al carrito correctamente",
+      title: "¡Se ha añadido al carrito correctamente!",
       icon: "success",
       timer: 2000,
       buttons: false,
@@ -23,13 +23,19 @@ function ItemCount({ stock, onAdd }) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <div className="flex items-center gap-4">
-        <button onClick={decrement} className="px-3 py-1 bg-gray-200 rounded">
+    <div className="flex items-center justify-between mt-4 w-full">
+      <div className="flex items-center">
+        <button
+          onClick={decrement}
+          className="px-4 py-2 bg-indigo-600 text-white rounded-l-md"
+        >
           -
         </button>
-        <span>{count}</span>
-        <button onClick={increment} className="px-3 py-1 bg-gray-200 rounded">
+        <span className="px-4 py-2 border-t border-b border-gray-300">{count}</span>
+        <button
+          onClick={increment}
+          className="px-4 py-2 bg-indigo-600 text-white rounded-r-md"
+        >
           +
         </button>
       </div>
@@ -38,7 +44,7 @@ function ItemCount({ stock, onAdd }) {
           onAdd(count);
           handleSubmit();
         }}
-        className="w-full px-8 py-2 m-6 text-sm font-medium text-white bg-indigo-400 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300"
+        className={`ml-4 px-6 py-2 text-sm font-medium text-white bg-indigo-500 rounded-md ${stock === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={stock === 0}
       >
         Agregar al carrito
@@ -55,16 +61,22 @@ function ItemDetail({ item }) {
   };
 
   return (
-    <div className="flex flex-row items-start justify-center">
-      <div className="w-1/2 flex justify-end pr-4">
-        <img src={item.imagen} alt={item.nombre} className="h-82 w-64 object-cover" />
+    <div className="max-w-6xl mx-auto p-8 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-start">
+      <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
+        <img
+          src={item.imagen}
+          alt={item.nombre}
+          className="h-96 w-full object-cover rounded-lg shadow-md"
+        />
       </div>
-      <div className="w-1/2 flex flex-col items-start pl-4">
-        <h2 className="text-3xl font-bold">{item.nombre}</h2>
-        <p className="text-lg mt-4">{item.descripcion}</p>
-        <p className="text-lg mt-6">Color: {item.color}</p>
-        <p className="text-lg mt-6">Stock: {item.stock}</p>
-        <p className="font-bold text-2xl my-4">${item.precio}</p>
+      <div className="md:w-1/2 flex flex-col items-start pl-6">
+        <h2 className="text-5xl font-bold text-gray-800 mb-6">{item.nombre}</h2>
+        <p className="text-lg text-gray-600 mb-8">{item.descripcion}</p>
+        <div className="text-lg text-gray-700 mb-4">
+          <p>Color: <span className="font-semibold">{item.color}</span></p>
+          <p>Stock: <span className="font-semibold">{item.stock}</span></p>
+        </div>
+        <p className="font-bold text-4xl text-gray-900 my-4">${item.precio}</p>
         <ItemCount stock={item.stock} onAdd={handleAdd} />
       </div>
     </div>
