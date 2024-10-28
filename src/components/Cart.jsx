@@ -13,7 +13,7 @@ return (
         Volver a la tienda
     </Link>
     </div>
-);
+    );
 }
 
 return (

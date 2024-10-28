@@ -21,7 +21,7 @@ function ItemDetailContainer() {
                         ...docSnap.data()
                     };
                 } else {
-                    console.log("No se encontró el producto!");
+                    console.log("No se pudo encontrar el producto!");
                     return null;
                 }
             } catch (error) {
@@ -50,7 +50,7 @@ function ItemDetailContainer() {
     }
 
     if (!item) {
-        return <div>Product not found</div>;
+        return <div>Producto no encontrado</div>;
     }
 
     return (

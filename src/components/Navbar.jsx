@@ -40,7 +40,7 @@ function Navbar() {
                 <Link 
                   to="/Remeras" 
                   className="block px-4 py-2 text-black hover:bg-indigo-100 transition-colors duration-200"
-                  onClick={() => setDropdownOpen(false)} // Close dropdown on click
+                  onClick={() => setDropdownOpen(false)}
                 >
                   Remeras
                 </Link>
@@ -49,7 +49,7 @@ function Navbar() {
                 <Link 
                   to="/Shorts" 
                   className="block px-4 py-2 text-black hover:bg-indigo-100 transition-colors duration-200"
-                  onClick={() => setDropdownOpen(false)} // Close dropdown on click
+                  onClick={() => setDropdownOpen(false)} 
                 >
                   Shorts
                 </Link>
@@ -58,7 +58,7 @@ function Navbar() {
                 <Link 
                   to="/Pantalones" 
                   className="block px-4 py-2 text-black hover:bg-indigo-100 transition-colors duration-200"
-                  onClick={() => setDropdownOpen(false)} // Close dropdown on click
+                  onClick={() => setDropdownOpen(false)}
                 >
                   Pantalones
                 </Link>

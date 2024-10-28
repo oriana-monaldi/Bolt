@@ -8,15 +8,16 @@ function Checkout() {
 const { cart, getTotalPrice, clearCart } = useCart();
 const navigate = useNavigate();
 const [formData, setFormData] = useState({
-nombre: "",
-apellido:"",
-email: "",
-telefono: "",
-calle: "",
-numero: "",
-piso: "",
-depto: "",
-});
+    nombre: "",
+    apellido:"",
+    email: "",
+    dni: "",
+    telefono: "",
+    calle: "",
+    numero: "",
+    piso: "",
+    depto: "",
+    });
 
 const handleSubmit = (e) => {
 e.preventDefault();
@@ -49,116 +50,115 @@ return (
     <form onSubmit={handleSubmit} className="space-y-8">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="border p-4 rounded shadow">
-        <h3 className="text-xl mb-4">Detalles de contacto</h3>
-        <div className="space-y-4">
-            <div>
-            <label className="block mb-1">Nombre </label>
-            <input
-                type="text"
-                name="nombre"
-                value={formData.nombre}
-                onChange={handleInputChange}
-                required
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            </div>
-            <div>
-            <label className="block mb-1">Apellido </label>
-            <input
-                type="text"
-                name="apellido"
-                value={formData.apellido}
-                onChange={handleInputChange}
-                required
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            </div>
-            <div>
-            <label className="block mb-1">Email</label>
-            <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            </div>
-            <div>
-                <label className="block mb-1">Teléfono</label>
+            <h3 className="text-xl mb-4">Detalles de contacto</h3>
+            <div className="space-y-4">
+                <div>
+                <label className="block mb-1">Nombre </label>
                 <input
-                    type="tel"
-                    name="telefono"
-                    value={formData.telefono}
+                    type="text"
+                    name="nombre"
+                    value={formData.nombre}
                     onChange={handleInputChange}
                     required
                     className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    pattern="[0-9]*"
                 />
-            </div>
-            <div>
-                <label className="block mb-1">DNI</label>
+                </div>
+                <div>
+                <label className="block mb-1">Apellido </label>
                 <input
-                    type="tel"
-                    name="dni"
-                    value={formData.telefono}
+                    type="text"
+                    name="apellido"
+                    value={formData.apellido}
                     onChange={handleInputChange}
                     required
                     className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    pattern="[0-9]*"
                 />
-            </div>
-            <h3 className="text-xl">Dirección</h3>
-            <div className="flex">
-            <div className="pr-4 flex-1">
-                <label className="block mb-1">Calle</label>
+                </div>
+                <div>
+                <label className="block mb-1">Email</label>
                 <input
-                type="text"
-                name="calle"
-                value={formData.calle}
-                onChange={handleInputChange}
-                required
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-            </div>
-            <div className="pr-4 flex-1">
-                <label className="block mb-1">Número</label>
-                <input
-                type="tel"
-                name="numero"
-                value={formData.numero}
-                onChange={handleInputChange}
-                required
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                pattern="[0-9]*"
-                />
-            </div>
-            </div>
-            <div className="flex">
-            <div className="pr-4 flex-1">
-                <label className="block mb-1">Piso</label>
-                <input
-                type="text"
-                name="piso"
-                value={formData.piso}
-                onChange={handleInputChange}
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div className="pr-4 flex-1">
-                <label className="block mb-1">Depto</label>
-                <input
-                type="text"
-                name="depto"
-                value={formData.depto}
-                onChange={handleInputChange}
-                className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
+                </div>
+                <div>
+                    <label className="block mb-1">Teléfono</label>
+                    <input
+                        type="tel"
+                        name="telefono"
+                        value={formData.telefono}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        pattern="[0-9]*"
+                    />
+                </div>
+                <div>
+                    <label className="block mb-1">DNI</label>
+                    <input
+                        type="tel"
+                        name="dni"
+                        value={formData.telefono}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        pattern="[0-9]*"
+                    />
+                </div>
+                <h3 className="text-xl">Dirección</h3>
+                <div className="flex">
+                    <div className="pr-4 flex-1">
+                        <label className="block mb-1">Calle</label>
+                        <input
+                        type="text"
+                        name="calle"
+                        value={formData.calle}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                    <div className="pr-4 flex-1">
+                        <label className="block mb-1">Número</label>
+                        <input
+                        type="tel"
+                        name="numero"
+                        value={formData.numero}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        pattern="[0-9]*"
+                        />
+                    </div>
+                </div>
+                <div className="flex">
+                    <div className="pr-4 flex-1">
+                        <label className="block mb-1">Piso</label>
+                        <input
+                        type="text"
+                        name="piso"
+                        value={formData.piso}
+                        onChange={handleInputChange}
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                    <div className="pr-4 flex-1">
+                        <label className="block mb-1">Depto</label>
+                        <input
+                        type="text"
+                        name="depto"
+                        value={formData.depto}
+                        onChange={handleInputChange}
+                        className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-
         <div className="space-y-4">
         <div className="border p-4 rounded shadow">
             <h3 className="text-xl mb-4">Resumen de la compra</h3>
@@ -179,7 +179,6 @@ return (
             </div>
             </div>
         </div>
-
         <div className="border p-4 rounded shadow">
             <h3 className="text-xl mb-4">Detalles de la Tarjeta</h3>
             <CreditCardForm />

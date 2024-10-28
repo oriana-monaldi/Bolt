@@ -18,7 +18,7 @@ function ItemList({ categoria }) {
         }));
         setData(productsArray);
       } catch (error) {
-        console.error("Error fetching products: ", error);
+        console.error("Error fetcheando productos: ", error);
       } finally {
         setLoading(false);
       }
