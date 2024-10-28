@@ -11,12 +11,14 @@ name: "",
 const handleInputChange = (e) => {
 const { name, value } = e.target;
 
-// Formateo de fecha de vencimiento para agregar la barra
 let formattedValue = value;
+
 if (name === "expiryDate") {
     if (value.length === 2 && !value.includes("/")) {
     formattedValue = value + "/";
     }
+} else if (name === "cardNumber") {
+    formattedValue = value.replace(/\s/g, "").replace(/(\d{4})/g, "$1 ").trim();
 }
 
 setCardData((prevData) => ({
@@ -24,6 +26,8 @@ setCardData((prevData) => ({
     [name]: formattedValue,
 }));
 };
+
+const isFormComplete = Object.values(cardData).every((value) => value !== "");
 
 return (
 <div>
@@ -34,9 +38,7 @@ return (
         <p className="text-xl mb-2">
             {cardData.cardNumber || "XXXX XXXX XXXX XXXX"}
         </p>
-        <p className="text-sm">
-            Vence: {cardData.expiryDate || "MM/YY"}
-        </p>
+        <p className="text-sm">Vence: {cardData.expiryDate || "MM/YY"}</p>
         </div>
         <div className="text-right">
         <p className="text-sm">CVC: {cardData.cvc || "XXX"}</p>
@@ -67,7 +69,7 @@ return (
         onChange={handleInputChange}
         placeholder="XXXX XXXX XXXX XXXX"
         className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-        maxLength="16"
+        maxLength="19"
         required
         />
     </div>
@@ -86,7 +88,7 @@ return (
             required
         />
         </div>
-
+        
         <div className="flex-1">
         <label className="block mb-1">CVC</label>
         <input
