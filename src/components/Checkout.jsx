@@ -100,9 +100,9 @@ return (
                 <div>
                     <label className="block mb-1">DNI</label>
                     <input
-                        type="tel"
+                        type="dni"
                         name="dni"
-                        value={formData.telefono}
+                        value={formData.dni}
                         onChange={handleInputChange}
                         required
                         className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"

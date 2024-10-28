@@ -10,14 +10,23 @@ name: "",
 
 const handleInputChange = (e) => {
 const { name, value } = e.target;
+
+// Formateo de fecha de vencimiento para agregar la barra
+let formattedValue = value;
+if (name === "expiryDate") {
+    if (value.length === 2 && !value.includes("/")) {
+    formattedValue = value + "/";
+    }
+}
+
 setCardData((prevData) => ({
     ...prevData,
-    [name]: value,
+    [name]: formattedValue,
 }));
 };
 
 return (
-<div >
+<div>
     <div className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white p-6 rounded-lg mb-4">
     <div className="flex justify-between">
         <div>
@@ -56,7 +65,7 @@ return (
         name="cardNumber"
         value={cardData.cardNumber}
         onChange={handleInputChange}
-        placeholder="1234 5678 9123 4567"
+        placeholder="XXXX XXXX XXXX XXXX"
         className="w-full border p-2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         maxLength="16"
         required
@@ -64,7 +73,7 @@ return (
     </div>
 
     <div className="flex space-x-4">
-        <div className="flex-1"> 
+        <div className="flex-1">
         <label className="block mb-1">Fecha de Vencimiento</label>
         <input
             type="text"
@@ -78,7 +87,7 @@ return (
         />
         </div>
 
-        <div className="flex-1"> 
+        <div className="flex-1">
         <label className="block mb-1">CVC</label>
         <input
             type="text"
@@ -92,8 +101,6 @@ return (
         />
         </div>
     </div>
-
-
     </form>
 </div>
 );
